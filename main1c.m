@@ -1,4 +1,4 @@
-img = imread('../data1/CT_1.jpg');
+img = imread('../data1/CT_5.jpg');
 [M,N]=size(img);
 
 blocksize=33;
@@ -13,3 +13,4 @@ for i = 1:blocksize:330
     end
 end
 imshow(img)
+imwrite(img,'../modified images/problem 1c/CT_5.jpg')
