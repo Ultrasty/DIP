@@ -12,7 +12,7 @@ for m = 1:M
         if(line(img(m,n)+1)<limit)
             line(img(m,n)+1)=line(img(m,n)+1)+1;
         else
-            remain=remain+1;
+            remain=remain+1;% 被裁剪掉的部分不扔掉而是记录起来
         end
     end
 end

@@ -21,6 +21,7 @@ for k = 1:1000
             for i = x1:x1+3
                 for j = y1:y1+3
                     % 先转换为double再计算，以免误差放大
+                    % 进行双三次插值，使用自己写的bicubic函数，a取-0.5
                     img_modified(x,y)=img_modified(x,y)+double(img(i,j))*bicubic(double(i)-x/4)*bicubic(double(j)-y/4);
                 end
             end

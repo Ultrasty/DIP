@@ -1,6 +1,6 @@
 img = imread('../data1/CT_1.jpg');
-%% 用自己写的transform进行全局直方图均衡
-operator = transform(img);
+% 用自己写的transform进行全局直方图均衡
+operator = transform(img);% operator为变换函数
 [M,N]=size(img);
 for m = 1:M
     for n = 1:N

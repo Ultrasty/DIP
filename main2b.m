@@ -12,6 +12,7 @@ for i = 1 :1000
             x2=floor(thex+1);
             y1=floor(they);
             y2=floor(they+1);
+            % 下面是计算P点的灰度值
             fR1=(x2-thex)*img(x1,y1)+(thex-x1)*img(x2,y1);
             fR2=(x2-thex)*img(x1,y2)+(thex-x1)*img(x2,y2);
             fP=(y2-they)*fR1+(they-y1)*fR2;
