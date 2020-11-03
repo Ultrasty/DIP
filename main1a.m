@@ -6,4 +6,4 @@ vecy = myhist(img);
 vecx = 0:1:255;
 subplot(2,1,2)
 plot(vecx,vecy)
-title('图2 使用自己写的统计各个灰度像素点个数的函数')
+title('图2 使用自己统计的数据利用plot生成的结果')
