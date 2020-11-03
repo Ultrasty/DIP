@@ -1,17 +1,12 @@
-img = imread('../data1/CT_4.jpg');
+img = imread('../data1/CT_1.jpg');
 [M,N]=size(img);
-% 下面的代码跑下来大概两分钟
+% 下面的代码跑下来大概三分钟
 operator = zeros(10,10,256);
 blocksize=33;% tiles的大小为33*33
 for i = 1:blocksize:330
     for j = 1:blocksize:330
         % 计算每个tiles的变换函数
         operator((i+32)/33,(j+32)/33,:) = transform_clip_limited(img(i:i+blocksize-1,j:j+blocksize-1));% 该tiles内的变换函数
-%         for m = i:1:i + blocksize-1
-%             for n = j:1:j + blocksize-1
-%                 img(m,n)=operator(img(m,n)+1);% 进行变换
-%             end
-%         end
     end
 end
 for i = 1 :330
@@ -43,4 +38,4 @@ for i=1:330
     end
 end
 imshow(img)
-imwrite(img,'../modified images/problem 1c/CT_4.jpg')% 保存结果为图片
+imwrite(img,'../modified images/problem 1c/CT_1.jpg')% 保存结果为图片
