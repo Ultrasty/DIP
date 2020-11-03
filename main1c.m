@@ -12,5 +12,8 @@ for i = 1:blocksize:330
         end
     end
 end
+subplot(2,1,1)
 imshow(img)
+subplot(2,1,2)
+imhist(img)
 imwrite(img,'../modified images/problem 1c/CT_5.jpg')
